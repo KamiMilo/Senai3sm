@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Container } from './src/components/Container/Container';
+import { Title } from './src/components/Title/Title';
+import { Button, Button2 } from './src/components/Button/Button';
+import { TextButton } from './src/components/TextButton/TextButton';
 
 export default function App() {
 
   //Hook
   const [count, setCount] = useState(0);
   
-  //effect
+  //effectr
   useEffect(() => {
     console.warn(`Contador Atualizado : ${count}`)
   },[count])
@@ -25,15 +27,15 @@ export default function App() {
   return (
     <Container>
 
-      <Text style= {styles.titulo}> Contador: {count}</Text>
+      <Title> Contador:{count}</Title>
 
-      <TouchableOpacity style= {styles.button}  onPress={increment}>
-        <Text style={styles.texto}>Incrementar</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style= {styles.button} onPress={decrement}>
-        <Text style={styles.texto}>Decrementar</Text>
-      </TouchableOpacity>
+      <Button onPress={increment}>
+        <TextButton>Incrementar</TextButton>
+      </Button>
+ 
+      <Button2 onPress={decrement}>
+        <TextButton> Decrementar</TextButton>
+      </Button2>
 
       <StatusBar style="auto"/>
       
@@ -41,28 +43,3 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-
-  titulo: {
-    fontSize: 25,
-    marginBottom: 10,
-    color: 'purple'
-  },
-
-  button:{
-    width: '50%',
-    backgroundColor: 'purple',
-    borderRadius: 5,
-    padding: 15, 
-    marginBottom: 8
-
-  },
-  texto: {
-    color: '#ffff',
-    fontSize: 13,
-    justifyContent: 'center',
-    marginLeft: 50
-  }
-  
-
-});
