@@ -31,8 +31,8 @@
 
         "expo-font",
         {
-          "fonts": "node_modules/@expo-google-fonts/roboto/Roboto_500Medium_Italic.ttf"
-          
+          "fonts": "node_modules/@expo-google-fonts/roboto"
+         
         }
       ]
     ]
