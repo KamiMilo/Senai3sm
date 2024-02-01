@@ -15,7 +15,7 @@ justify-content: center;
 border-radius: 0px 0px 15px 15px;
 box-shadow: 0px 0px 10px #00000030;
 /* shadow-color: red; */
-elevation: 5px;
+elevation: 5;
 `
 
 export const HeaderContent = styled.SafeAreaView`

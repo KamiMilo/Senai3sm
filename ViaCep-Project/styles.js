@@ -1,4 +1,5 @@
 //estilizações da raiz do projeto
+//faz referencia ao app.js
 
 import styled from "styled-components";
 
