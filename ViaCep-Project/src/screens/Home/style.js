@@ -13,3 +13,8 @@ padding-bottom: 15px;
 /* align-items: center; */
 
 `
+export const BoxContainer= styled.View `
+width: 90%;
+flex-direction: row;
+justify-content:space-between
+`
