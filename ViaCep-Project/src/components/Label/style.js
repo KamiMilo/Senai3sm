@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
+
 
 export const InputLabel = styled.Text`
 text-align: left;

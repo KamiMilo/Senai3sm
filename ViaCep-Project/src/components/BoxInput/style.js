@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 
 // componente dinamico que contém a  label mais input
 export const FieldContent= styled.View `
