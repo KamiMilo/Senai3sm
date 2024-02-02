@@ -14,8 +14,7 @@ export const BoxInput = ({
     fieldValue= null,
     onChangeText = null,
     KeyType = 'default',
-    maxLegth
-
+    maxLength
 }) =>{
     return(
       <FieldContent fieldWidth={fieldWidth}>
@@ -25,7 +24,7 @@ export const BoxInput = ({
             placeholder = {placeholder}
             editable= {editable}
             KeyType= {KeyType}
-            maxLegth={maxLegth}
+            maxLength={maxLength}
             fieldValue= {fieldValue}
             onChangeText={onChangeText}     
             />      

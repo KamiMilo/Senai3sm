@@ -5,8 +5,8 @@ placeholder,
 editable,
 fieldValue,
 onChangeText,
-keyType,
-maxLegth
+KeyType,
+maxLength
 
 }) {
 return(
@@ -14,8 +14,8 @@ return(
     <InputText
     placeholder={placeholder}
     editable={editable}
-    keyboardType={keyType}
-    maxLegth={maxLegth}
+    keyboardType={KeyType}
+    maxLength={maxLength}
     value={fieldValue}
     onChangeText={onChangeText}
     />
