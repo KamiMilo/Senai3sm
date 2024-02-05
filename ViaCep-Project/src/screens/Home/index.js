@@ -9,6 +9,7 @@ export function Home() {
   const [logradouro, setLogradouro] = useState('');
   const [bairro, setBairro] = useState('');
   const [cidade, setCidade] = useState('');
+  const [estado,setEstado] = useState('');
   const [uf, setUf] = useState('');
 
 
@@ -25,12 +26,7 @@ export function Home() {
           setBairro(endereco.data.bairro);
           setCidade(endereco.data.localidade);
           setUf(endereco.data.uf);
-
-          if (!endereco.error) {
-             alert("Verifique o CEP")
-          }
         };
-
 
       } catch (error) {
         alert("erro ao buscar CEP!!");
@@ -45,16 +41,7 @@ export function Home() {
   // [cep] = renderiza quando a variável dentro do array for alterado
 
   return (
-
-    //ScrollForm
-
-    //ContainerForm
-    //BoxInput:
-    //Label
-    //Input
-
-
-    <ScrollForm>
+  <ScrollForm>
       <ContainerForm>
         <BoxInput
           textLabel="Informe o CEP:"
@@ -101,8 +88,9 @@ export function Home() {
             textLabel="Estado:"
             placeholder="Estado..."
             fieldWidth={70}
-            fieldValue={uf}
-            onChangeText={(tx) => { setUf(tx) }}
+            // fieldValue={estado}
+            // onChangeText={(tx) => { setEstado(tx) }}
+            
 
           />
 
@@ -111,6 +99,8 @@ export function Home() {
             placeholder=" UF"
             fieldWidth={25}
             maxLength={2}
+            fieldValue={uf}
+            onChangeText={(tx) => { setUf(tx) }}
           />
 
         </BoxContainer>
