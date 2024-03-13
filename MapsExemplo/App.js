@@ -83,8 +83,8 @@ export default function App() {
           {/* configuração para aparecer o marcador do ponto */}
             <Marker
               coordinate={{
-                latitude: -23.6666,
-                longitude: -46.5322,
+                latitude: -23.595354,
+                longitude: -46.664280,
               }}
               title='Destino'
               description='preciso ir pra lá'
