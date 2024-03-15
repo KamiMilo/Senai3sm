@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Modal, Image } from 'react-native';
 
-import { Camera, CameraType } from 'expo-camera';
+import { Camera, CameraType, FlashMode } from 'expo-camera';
 import { useEffect, useState, useRef } from 'react';
 
 import { FontAwesome } from '@expo/vector-icons'
@@ -19,7 +19,7 @@ export default function App() {
   const [photo, setphoto] = useState(null)
   const [openModal, setOpenModal] = useState(false)
   const cameraRef = useRef(null)
-  const [flashModeset,setflashMode]= useState()
+  const [flash,setflash]= useState(Camera.Constants.FlashMode.off)
   
   //constante que guarda se vai abrir a camera traseira ou frontal
   const [tipoCamera, setTipoCamera] = useState(Camera.Constants.Type.front)
@@ -54,6 +54,14 @@ export default function App() {
     
   }
 
+   function flashOn() {
+    setflash(
+      flash === Camera.Constants.FlashMode.off 
+      ? Camera.Constants.FlashMode.on  :
+      Camera.Constants.FlashMode.off 
+    );
+    
+  };
   //permissão para camera
   useEffect(() => {
     (async () => {
